@@ -16,6 +16,8 @@ body {
     background-color: var(--cor-de-fundo) ;
     font-family: 'Raleway';
     margin: 0;
+    margin-left: 100px;
+    margin-right: 100px;
     padding: 0;
     line-height: 1;
 }
@@ -42,7 +44,28 @@ https://en.bem.info/methodology/quick-start/*/
 /*Sección Menu*/
 
 section.menu{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.menu__list__item__contato{
+    display: none;
+}
 
+.menu__header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu__list__item:last-child{
+    font-weight: bold;
+}
+
+.menu__list{
+    display: flex;
+    gap: 10px;
 }
 
 /*Sección Title*/
@@ -50,6 +73,37 @@ section.menu{
 section.title{
 
 }
+
+.title__div{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.title__container{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    align-content: center;
+}
+
+.title__bio{
+    font-size: 3rem;
+}
+
+.title__subsection{
+    font-weight: lighter;
+}
+
+.title__network{
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    justify-items: flex-start;
+    padding-left: 0;
+}
+
 
 /*Sección About*/
 
