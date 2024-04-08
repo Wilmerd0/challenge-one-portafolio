@@ -16,8 +16,6 @@ body {
     background-color: var(--cor-de-fundo) ;
     font-family: 'Raleway';
     margin: 0;
-    margin-left: 100px;
-    margin-right: 100px;
     padding: 0;
     line-height: 1;
 }
@@ -41,55 +39,71 @@ con una interfaz de usuario compleja, y permite la reutilización del código ex
 Enlace de la documentación oficial!
 https://en.bem.info/methodology/quick-start/*/
 
+
 /*Sección Menu*/
 
 section.menu{
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 10px;
+    padding: 0px 8px 0px 8px;
 }
 .menu__list__item__contato{
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 5px;
 }
 
 .menu__header{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
-}
-
-.menu__list__item:last-child{
-    font-weight: bold;
-}
-
-.menu__list{
-    display: flex;
     gap: 10px;
+    
+}
+
+..menu__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu__list__item{
+    display: none;
 }
 
 /*Sección Title*/
 
 section.title{
-
+    padding: 0px 8px 0px 8px;
 }
 
 .title__div{
     display: flex;
     flex-direction: row-reverse;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: 32px 5px 32px 5px;
+
 }
 
 .title__container{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     /* justify-content: center; */
     align-content: center;
 }
 
+.title__profile{
+    height: 40%;
+    width: 40%;
+}
+
 .title__bio{
-    font-size: 3rem;
+    font-size: 1.5rem;
+
 }
 
 .title__subsection{
@@ -99,7 +113,7 @@ section.title{
 .title__network{
     display: flex;
     flex-direction: row;
-    gap: 18px;
+    gap: 15px;
     justify-items: flex-start;
     padding-left: 0;
 }
@@ -108,14 +122,81 @@ section.title{
 /*Sección About*/
 
 section.about{
+    background-color: #EAF2FD;
+    padding: 12px 12px 12px 12px;
+}
+.about__title{
+    font-size: 2rem
+}
 
+/* Skills */
+
+.skills__line{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 8px;
+    flex-wrap: wrap;
+
+}
+
+.skills__title{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.skills__box{
+    background-color: #FFFFFF;
+    height: 118px;
+    width: 176px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+}
+
+.skills__box ul{
+    padding-inline-start: 20px
+}
+
+.skills__img{
+    padding-bottom: 10px;
 }
 
 /*Sección Hobbies*/
 
 section.hobbies{
-    
+
 }
+.hobbies__line{
+    display: flex;
+    gap: 8px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.hobbies__title{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.hobbies__box{
+    background-color: #FFFFFF;
+    height: 118px;
+    width: 176px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+}
+
+.hobbies__box ul{
+    padding-inline-start: 20px
+}
+
+.hobbies__img{
+    padding-bottom: 10px;
+}
+
 
 /* Experiencia Académica*/
 
@@ -138,7 +219,7 @@ section.formcontato{
 /*footeer*/
 
 section.footer{
-   
+
 }
 
 /* Vamos a desafiarnos trabajando con responsividad?
@@ -165,6 +246,136 @@ Utiliza las referencias de los breakpoints @media abajo */
 /*Mobile*/
 @media (min-width: 425px) {
 
+    section.menu{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .menu__list__item__contato{
+        display: none;
+    }
+    
+    .menu__header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        
+    }
+    
+    .menu__list__item:last-child{
+        font-weight: bold;
+    }
+    
+    .menu__list{
+        display: flex;
+        gap: 20px;
+    }
+    
+    /*Sección Title*/
+    
+    section.title{
+    
+    }
+    
+    .title__div{
+        display: flex;
+        flex-direction: row-reverse;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    
+    .title__container{
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: center; */
+        align-content: center;
+    }
+    
+    .title__bio{
+        font-size: 3rem;
+    }
+    
+    .title__subsection{
+        font-weight: lighter;
+    }
+    
+    .title__network{
+        display: flex;
+        flex-direction: row;
+        gap: 18px;
+        justify-items: flex-start;
+        padding-left: 0;
+    }
+    
+    
+    /*Sección About*/
+    
+    section.about{
+        background-color: #EAF2FD;
+        padding: 50px 450px 50px 100px;
+    }
+    .about__title{
+        font-size: 2rem
+    }
+    .about__container{
+        
+    }
+    /* Skills */
+    
+    .skills__line{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        height: 174;
+        width: 176;
+    }
+    
+    .skills__box{
+        background-color: #ffffff;
+    }
+    
+    /*Sección Hobbies*/
+    
+    section.hobbies{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    
+    
+    /* Experiencia Académica*/
+    
+    section.academic{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    
+    /* experiencia*/
+    
+    section.experience{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    
+    /*Contacto*/
+    
+    section.formcontato{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    
+    /*footeer*/
+    
+    section.footer{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    
+    
 /*Menu*/
 
 /*Titulo*/
